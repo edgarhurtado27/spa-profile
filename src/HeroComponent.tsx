@@ -165,7 +165,7 @@ function HeroComponent() {
             <img
               className="rounded-full bg-white dark:bg-zinc-900
 border border-stone-300 dark:border-zinc-800 p-2"
-              src="./src/assets/images/photo_profile.webp"
+              src="/images/photo_profile.webp"
             ></img>
           </div>
         </div>
