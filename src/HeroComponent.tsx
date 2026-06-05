@@ -68,7 +68,7 @@ function HeroComponent() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-6"
+                className="size-6"
               >
                 <path
                   stroke-linecap="round"
@@ -109,7 +109,7 @@ function HeroComponent() {
                   rel="noopener noreferrer">
                   <svg
                     fill="#000000"
-                    class="size-6"
+                    className="size-6"
                     viewBox="0 -0.5 25 25"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -126,7 +126,7 @@ function HeroComponent() {
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    class="size-6"
+                    className="size-6"
                     viewBox="0 0 48 48"
                   >
                     <path
@@ -142,7 +142,7 @@ function HeroComponent() {
 
                 <a href={`mailto:'${PERSONAL_INFO.email}`}>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
 </svg>
                 </a>
