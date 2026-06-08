@@ -3,27 +3,28 @@ import Experience from "./components/experience/Experience";
 
 const coreStack = [
   "Java",
-  "Node",
-  "React",
+  "Spring Boot",
   "Angular",
   "Oracle DB",
-  "Mongo",
   "TypeScript",
   "Tailwind CSS",
-  "Apache Camel",
 ];
 
-const whatIDo = [
-  "Build responsive and accessible user interfaces",
-  "Turn product requirements into scalable backend systems",
-];
+const prevStack = [
+  "Node",
+  "Quarkus",
+  "HCL Commerce",
+  "Rabbit MQ",
+  "React",
+  "Mongo",
+  "AngularJS",
+  "EC2",
+  "S3",
+  "Axis2",
+  "Apache Camel",
+]
 
 const greetings = "Hello, I'm";
-
-const howIWork = [
-  "Clear communication with product and develop teams",
-  "Continuous improvement through iteration and feedback",
-];
 
 const PERSONAL_INFO = {
   name: "Edgar",
@@ -55,6 +56,12 @@ function HeroComponent() {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
     localStorage.setItem("theme", newTheme);
   };
+
+  const initExpYr = 2018;
+  const currentYear = new Date().getFullYear();
+
+  const yrsExp = currentYear - initExpYr;
+
 
   return (
     <section className="min-h-screen bg-[#F9FAFB] text-stone-900 dark:bg-[#1E1E22] dark:text-zinc-100 transition-colors duration-500">
@@ -202,7 +209,7 @@ function HeroComponent() {
                     d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
                   />
                 </svg>
-                <p>8+Years Experience</p>
+                <p>{yrsExp}+ Years Experience</p>
               </div>
 
               <div className="flex gap-1 items-center align-start">
@@ -212,7 +219,7 @@ function HeroComponent() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
+                  className="size-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -235,7 +242,7 @@ function HeroComponent() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
+                  className="size-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -285,7 +292,7 @@ border border-stone-300 dark:border-zinc-800 p-2"
                 d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
               />
             </svg>
-            <h2 className="text-lg font-semibold">Backend development</h2>
+            <h2 className="text-lg font-semibold">Backend Development</h2>
 
             <p className="mt-3 text-gray-700 dark:text-gray-400 mt-2 text-sm">
               Building robuts REST APIs and scalable backend systems with Java.
@@ -379,7 +386,7 @@ border border-stone-300 dark:border-zinc-800 p-2"
             <div className="text-md font-bold tracking-widest text-[#3B82F6] dark:text-blue-300">
               Core expertise
             </div>
-            <div className="flex gap-1">
+            <div className="flex flex-wrap gap-2">
               {coreStack.map((stackItem) => (
                 <span
                   key={stackItem}
@@ -399,11 +406,12 @@ border border-stone-300 dark:border-zinc-800 p-2"
             <div className="text-md font-bold tracking-widest text-[#3B82F6] dark:text-blue-300">
               Also worked with
             </div>
-            <div className="flex gap-1">
-              {coreStack.map((stackItem) => (
+            <div className="flex flex-wrap gap-2">
+
+              {prevStack.map((stackItem) => (
                 <span
                   key={stackItem}
-                  className="rounded-full bg-[#34363F] px-4 py-2 text-sm text-slate-100"
+                  className="rounded-full bg-mist-400 px-4 py-2 text-sm text-slate-100"
                 >
                   {stackItem}
                 </span>

@@ -9,38 +9,57 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    company: "Visa Inc.",
-    role: "Senior Software Engineer",
-    period: "2024 - Present",
+    company: "TCS",
+    role: "Backend Software Engineer",
+    period: "12/2025 - Present",
     achievements: [
       "Building scalable backend services using Java and Spring Boot.",
       "Designed and implemented microservices architecture.",
-      "Improved system performance through optimization and caching."
-    ]
+      "Improved system performance through optimization and caching.",
+    ],
   },
   {
-    company: "BAC Credomatic",
-    role: "Software Engineer",
-    period: "2021 - 2024",
+    company: "3Pillar Global",
+    role: "Senior Software Engineer",
+    period: "06/2021 - 12/2025",
     achievements: [
       "Developed and maintained core banking applications.",
       "Implemented REST APIs consumed by web and mobile apps.",
-      "Collaborated with product teams."
-    ]
-  }
+      "Collaborated with product teams.",
+    ],
+  },
+  {
+    company: "Edge Bound",
+    role: "HCL & MERN developer",
+    period: "08/2018 - 06/2021",
+    achievements: [
+      "Developed and maintained core banking applications.",
+      "Implemented REST APIs consumed by web and mobile apps.",
+      "Collaborated with product teams.",
+    ],
+  },
+  {
+    company: "Habil MX",
+    role: "Java developer",
+    period: "04/2017 - 06/2018",
+    achievements: [
+      "Developed and maintained core banking applications.",
+      "Implemented REST APIs consumed by web and mobile apps.",
+      "Collaborated with product teams.",
+    ],
+  },
 ];
 
 function Experience() {
   return (
     <section className="mt-15 space-y-6">
-      <h2 className="text-3xl font-bold">Experience</h2>
+      <h1 className="text-3xl font-bold">Experience</h1>
 
       <div className="rounded-2xl">
-        {experiences.map((experience, index) => (
+        {experiences.map((experience) => (
           <ExperienceItem
             key={experience.company}
             experience={experience}
-            isLast={index === experiences.length - 1}
           />
         ))}
       </div>
@@ -49,4 +68,3 @@ function Experience() {
 }
 
 export default Experience;
-

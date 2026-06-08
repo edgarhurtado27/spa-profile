@@ -2,10 +2,9 @@ import Experience from "./Experience";
 
 interface Props {
   experience: Experience;
-  isLast: boolean;
 }
 
-function ExperienceItem({ experience, isLast }: Props) {
+function ExperienceItem({ experience }: Props) {
   return (
     <div
       className={`
@@ -17,7 +16,7 @@ function ExperienceItem({ experience, isLast }: Props) {
     >
       {/* Timeline */}
       <div className="relative flex justify-center items-center">
-          <div className="absolute  h-full w-[2px] bg-blue-500" />
+        <div className="absolute  h-full w-[2px] bg-blue-500" />
 
         <div
           className="
@@ -34,28 +33,11 @@ function ExperienceItem({ experience, isLast }: Props) {
 
       {/* Company */}
       <div className="space-y-2 py-5">
-        <div
-          className="
-            flex
-            h-16
-            w-24
-            items-center
-            justify-center
-            rounded-xl
-            border
-            bg-white
-            shadow-sm
-          "
-        >
-          LOGO
-        </div>
 
-        <div>
-          <h3 className="text-xl font-semibold">{experience.role}</h3>
-
-          <p className="font-medium text-blue-600">{experience.company}</p>
-
-          <p className="text-gray-500">{experience.period}</p>
+        <div className="text-sm font-semibold tracking-widest text-[#3B82F6] dark:text-blue-300">
+          <p>{experience.role}</p>
+          <p>{experience.company}</p>
+          <p className="text-gray-500 dark:text-white">{experience.period}</p>
         </div>
       </div>
 
@@ -67,7 +49,8 @@ function ExperienceItem({ experience, isLast }: Props) {
               key={item}
               className="
                 list-disc
-                text-gray-700
+text-gray-700 dark:text-gray-400 
+text-sm
               "
             >
               {item}
