@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Experience from "./components/experience/Experience";
 
 const coreStack = [
   "Java",
@@ -390,27 +391,28 @@ border border-stone-300 dark:border-zinc-800 p-2"
             </div>
           </div>
 
-
           <div
             className="grid grid-cols-1
     lg:grid-cols-[1fr_4fr]
-    gap-8">
-        <div className="text-md font-bold tracking-widest text-[#3B82F6] dark:text-blue-300">
-        Also worked with 
-        </div>
-        <div className="flex gap-1">
-          {coreStack.map((stackItem) => (
-            <span
-              key={stackItem}
-              className="rounded-full bg-[#34363F] px-4 py-2 text-sm text-slate-100"
-            >
-              {stackItem}
-            </span>
-          ))}
-        </div>
+    gap-8"
+          >
+            <div className="text-md font-bold tracking-widest text-[#3B82F6] dark:text-blue-300">
+              Also worked with
+            </div>
+            <div className="flex gap-1">
+              {coreStack.map((stackItem) => (
+                <span
+                  key={stackItem}
+                  className="rounded-full bg-[#34363F] px-4 py-2 text-sm text-slate-100"
+                >
+                  {stackItem}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
-        </div>
+        <Experience></Experience>
       </div>
     </section>
   );
