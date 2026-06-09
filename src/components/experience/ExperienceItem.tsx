@@ -9,9 +9,8 @@ function ExperienceItem({ experience }: Props) {
     <div
       className={`
         grid
-        grid-cols-[40px_280px_1fr]
+        grid-cols-[1fr_2fr_3fr]
         gap-8
-        px-8
       `}
     >
       {/* Timeline */}
