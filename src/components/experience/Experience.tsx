@@ -14,18 +14,17 @@ const experiences: Experience[] = [
     period: "12/2025 - Present",
     achievements: [
       "Developed REST APIs for an embedded payments platform using Java 17 and Spring Boot.",
-      "Built Angular 18 micro frontends from Figma designs, leveraging AI-assisted development to accelerate implementation.",
-      "Refactored the application by removing an obsolete legacy data access JAR after the platform had migrated to GraphQL, updating affected modules and unit tests to ensure a cleaner and more maintainable codebase.",
+"Refactored the application by removing an obsolete legacy data access JAR after the migration to GraphQL, updating impacted modules and unit tests.",
       "Increased unit test coverage to over 85% by implementing comprehensive automated tests across the application.",
     ],
   },
   {
-    company: "3Pillar Global",
+    company: "3Pillar",
     role: "Senior Software Engineer",
     period: "06/2021 - 12/2025",
     achievements: [
       "Built an SFTP client using Apache Commons Net to automate secure bulk imports of patients, vaccines, and inventory data.",
-      "Designed and implemented a multithreaded batch processing service using Java's ExecutorService, scheduled with Quartz, capable of generating forecasts for over one million patient records during peak execution windows.",
+      "Designed a multithreaded batch processing service using Java ExecutorService and Quartz to generate forecasts for over one million patient records.",
       "Maintained and enhanced a mission-critical healthcare platform built with Java 11 and Oracle by delivering production fixes and new business features.",
     ],
   },
