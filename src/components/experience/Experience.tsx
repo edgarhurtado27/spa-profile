@@ -13,9 +13,10 @@ const experiences: Experience[] = [
     role: "Backend Software Engineer",
     period: "12/2025 - Present",
     achievements: [
-      "Building scalable backend services using Java and Spring Boot.",
-      "Designed and implemented microservices architecture.",
-      "Improved system performance through optimization and caching.",
+      "Developed REST APIs for an embedded payments platform using Java 17 and Spring Boot.",
+      "Built Angular 18 micro frontends from Figma designs, leveraging AI-assisted development to accelerate implementation.",
+      "Refactored the application by removing an obsolete legacy data access JAR after the platform had migrated to GraphQL, updating affected modules and unit tests to ensure a cleaner and more maintainable codebase.",
+      "Increased unit test coverage to over 85% by implementing comprehensive automated tests across the application.",
     ],
   },
   {
@@ -23,29 +24,30 @@ const experiences: Experience[] = [
     role: "Senior Software Engineer",
     period: "06/2021 - 12/2025",
     achievements: [
-      "Developed and maintained core banking applications.",
-      "Implemented REST APIs consumed by web and mobile apps.",
-      "Collaborated with product teams.",
+      "Built an SFTP client using Apache Commons Net to automate secure bulk imports of patients, vaccines, and inventory data.",
+      "Designed and implemented a multithreaded batch processing service using Java's ExecutorService, scheduled with Quartz, capable of generating forecasts for over one million patient records during peak execution windows.",
+      "Maintained and enhanced a mission-critical healthcare platform built with Java 11 and Oracle by delivering production fixes and new business features.",
     ],
   },
   {
     company: "Edge Bound",
-    role: "HCL & MERN developer",
+    role: "HCL & MERN Developer",
     period: "08/2018 - 06/2021",
     achievements: [
-      "Developed and maintained core banking applications.",
-      "Implemented REST APIs consumed by web and mobile apps.",
-      "Collaborated with product teams.",
+      "Integrated multiple payment gateways, including PayPal, Mercado Pago, and custom client payment providers, into HCL Commerce storefronts.",
+      "Designed and developed Node.js microservices to manage order processing and business workflows.",
+      "Built an event-driven order fulfillment service using RabbitMQ, retries, and dead-letter queues to ensure reliable integration with client systems.",
+      "Implemented an automated pricing solution to support government tax-free sales events, enabling compliant pricing updates across e-commerce storefronts.",
     ],
   },
   {
     company: "Habil MX",
-    role: "Java developer",
+    role: "Java Developer",
     period: "04/2017 - 06/2018",
     achievements: [
-      "Developed and maintained core banking applications.",
-      "Implemented REST APIs consumed by web and mobile apps.",
-      "Collaborated with product teams.",
+      "Modernized the user experience of a legacy life insurance application through UI enhancements.",
+      "Developed SOAP web service clients using Apache Axis to integrate with external enterprise systems.",
+      "Resolved defects and improved the accuracy of legacy insurance reports.",
     ],
   },
 ];
@@ -57,10 +59,7 @@ function Experience() {
 
       <div className="rounded-2xl">
         {experiences.map((experience) => (
-          <ExperienceItem
-            key={experience.company}
-            experience={experience}
-          />
+          <ExperienceItem key={experience.company} experience={experience} />
         ))}
       </div>
     </section>

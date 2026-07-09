@@ -31,8 +31,7 @@ function ExperienceItem({ experience }: Props) {
       </div>
 
       {/* Company */}
-      <div className="space-y-2 py-5">
-
+      <div className="relative flex flex-col space-y-2 py-5 justify-center">
         <div className="text-sm font-semibold tracking-widest text-[#3B82F6] dark:text-blue-300">
           <p>{experience.role}</p>
           <p>{experience.company}</p>
