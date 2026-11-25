@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 760" width="640" height="760" role="img" aria-labelledby="title desc">
+  <title id="title">Traceflow preview</title>
+  <desc id="desc">A dark code editor showing a recursion algorithm next to an interactive call stack visualization.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#131C2E"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFFFFF" stroke-opacity=".04"/>
+    </pattern>
+    <clipPath id="window">
+      <rect x="32" y="40" width="576" height="680" rx="24"/>
+    </clipPath>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="760" fill="url(#bg)"/>
+  <rect width="640" height="760" fill="url(#grid)"/>
+  <circle cx="520" cy="150" r="170" fill="#2563EB" opacity=".28" filter="url(#glow)"/>
+  <circle cx="110" cy="650" r="160" fill="#7C3AED" opacity=".2" filter="url(#glow)"/>
+
+  <g clip-path="url(#window)">
+    <rect x="32" y="40" width="576" height="680" fill="#0F172A"/>
+    <rect x="32" y="40" width="576" height="64" fill="#111C30"/>
+    <path d="M32 104h576" stroke="#1E293B"/>
+
+    <circle cx="62" cy="72" r="6" fill="#F87171"/>
+    <circle cx="84" cy="72" r="6" fill="#FBBF24"/>
+    <circle cx="106" cy="72" r="6" fill="#34D399"/>
+    <text x="140" y="78" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">traceflow</text>
+    <rect x="462" y="56" width="118" height="32" rx="16" fill="#1D4ED8" fill-opacity=".22" stroke="#3B82F6" stroke-opacity=".4"/>
+    <text x="521" y="77" fill="#93C5FD" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Visualizer</text>
+
+    <!-- Code editor -->
+    <rect x="54" y="126" width="322" height="388" rx="14" fill="#0B1120" stroke="#1E293B"/>
+    <rect x="54" y="126" width="322" height="46" rx="14" fill="#111C30"/>
+    <path d="M54 172h322" stroke="#1E293B"/>
+    <text x="76" y="155" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">fibonacci.ts</text>
+    <circle cx="348" cy="149" r="4" fill="#F59E0B"/>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">
+      <text x="76" y="208" fill="#64748B">1</text>
+      <text x="104" y="208" fill="#C084FC">function</text>
+      <text x="190" y="208" fill="#60A5FA">fib</text>
+      <text x="226" y="208" fill="#E2E8F0">(n) {</text>
+
+      <text x="76" y="242" fill="#64748B">2</text>
+      <text x="104" y="242" fill="#C084FC">if</text>
+      <text x="132" y="242" fill="#E2E8F0">(n &lt;= </text>
+      <text x="200" y="242" fill="#FBBF24">1</text>
+      <text x="218" y="242" fill="#E2E8F0">)</text>
+      <text x="238" y="242" fill="#C084FC">return</text>
+      <text x="310" y="242" fill="#E2E8F0">n;</text>
+
+      <text x="76" y="276" fill="#64748B">3</text>
+      <text x="104" y="276" fill="#C084FC">return</text>
+      <text x="176" y="276" fill="#60A5FA">fib</text>
+      <text x="212" y="276" fill="#E2E8F0">(n - </text>
+      <text x="266" y="276" fill="#FBBF24">1</text>
+      <text x="284" y="276" fill="#E2E8F0">)</text>
+
+      <text x="76" y="310" fill="#64748B">4</text>
+      <text x="140" y="310" fill="#E2E8F0">+</text>
+      <text x="162" y="310" fill="#60A5FA">fib</text>
+      <text x="198" y="310" fill="#E2E8F0">(n - </text>
+      <text x="252" y="310" fill="#FBBF24">2</text>
+      <text x="270" y="310" fill="#E2E8F0">);</text>
+
+      <text x="76" y="344" fill="#64748B">5</text>
+      <text x="104" y="344" fill="#E2E8F0">}</text>
+
+      <text x="76" y="378" fill="#64748B">6</text>
+      <text x="104" y="378" fill="#64748B">// trace the call stack</text>
+      <text x="76" y="412" fill="#64748B">7</text>
+      <text x="104" y="412" fill="#E2E8F0">trace(</text>
+      <text x="172" y="412" fill="#60A5FA">fib</text>
+      <text x="208" y="412" fill="#E2E8F0">, </text>
+      <text x="224" y="412" fill="#FBBF24">5</text>
+      <text x="242" y="412" fill="#E2E8F0">);</text>
+
+      <text x="76" y="446" fill="#64748B">8</text>
+      <rect x="100" y="458" width="8" height="18" fill="#3B82F6"/>
+    </g>
+
+    <!-- Call stack -->
+    <rect x="54" y="540" width="322" height="150" rx="14" fill="#101A2C" stroke="#1E293B"/>
+    <text x="76" y="574" fill="#E2E8F0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Call stack</text>
+    <text x="356" y="574" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" text-anchor="end">depth 4</text>
+
+    <rect x="70" y="590" width="290" height="28" rx="7" fill="#1D4ED8" fill-opacity=".18" stroke="#3B82F6" stroke-opacity=".45"/>
+    <text x="84" y="609" fill="#BFDBFE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">fib(5)</text>
+    <text x="346" y="609" fill="#60A5FA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" text-anchor="end">return 5</text>
+
+    <rect x="70" y="626" width="290" height="28" rx="7" fill="#7C3AED" fill-opacity=".14" stroke="#8B5CF6" stroke-opacity=".35"/>
+    <text x="84" y="645" fill="#DDD6FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">fib(4)</text>
+    <text x="346" y="645" fill="#A78BFA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" text-anchor="end">return 3</text>
+
+    <rect x="70" y="662" width="290" height="28" rx="7" fill="#0F2E26" stroke="#10B981" stroke-opacity=".3"/>
+    <text x="84" y="681" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">fib(3)</text>
+    <text x="346" y="681" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" text-anchor="end">return 2</text>
+
+    <!-- Graph -->
+    <rect x="396" y="126" width="186" height="564" rx="14" fill="#101A2C" stroke="#1E293B"/>
+    <text x="418" y="162" fill="#E2E8F0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">DFS traversal</text>
+    <text x="418" y="184" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">start node: A</text>
+
+    <g stroke="#334155" stroke-width="3" stroke-linecap="round">
+      <path d="M489 250 434 330"/>
+      <path d="M489 250 546 330"/>
+      <path d="M434 330 410 430"/>
+      <path d="M434 330 466 430"/>
+      <path d="M546 330 522 430"/>
+      <path d="M546 330 574 430"/>
+      <path d="M410 430 434 530"/>
+      <path d="M466 430 490 530"/>
+    </g>
+
+    <g fill="#1E3A8A" stroke="#3B82F6" stroke-width="2">
+      <circle cx="489" cy="250" r="26"/>
+      <circle cx="434" cy="330" r="26"/>
+      <circle cx="410" cy="430" r="26"/>
+      <circle cx="434" cy="530" r="26"/>
+    </g>
+    <circle cx="489" cy="250" r="26" fill="#3B82F6" opacity=".5" filter="url(#nodeGlow)"/>
+
+    <g fill="#1E293B" stroke="#475569" stroke-width="2">
+      <circle cx="546" cy="330" r="26"/>
+      <circle cx="466" cy="430" r="26"/>
+      <circle cx="522" cy="430" r="26"/>
+      <circle cx="574" cy="430" r="26"/>
+      <circle cx="490" cy="530" r="26"/>
+    </g>
+
+    <g fill="#DBEAFE" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">
+      <text x="489" y="256">A</text>
+      <text x="434" y="336">B</text>
+      <text x="410" y="436">C</text>
+      <text x="434" y="536">D</text>
+    </g>
+    <g fill="#94A3B8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">
+      <text x="546" y="336">E</text>
+      <text x="466" y="436">F</text>
+      <text x="522" y="436">G</text>
+      <text x="574" y="436">H</text>
+      <text x="490" y="536">I</text>
+    </g>
+
+    <rect x="418" y="600" width="142" height="66" rx="10" fill="#0B1120" stroke="#1E293B"/>
+    <text x="434" y="624" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">VISITED</text>
+    <text x="434" y="648" fill="#93C5FD" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">A → B → C → D</text>
+  </g>
+
+  <rect x="32" y="40" width="576" height="680" rx="24" fill="none" stroke="#334155" stroke-opacity=".65"/>
+</svg>

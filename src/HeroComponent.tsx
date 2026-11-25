@@ -1,4 +1,5 @@
 import Experience from "./components/experience/Experience";
+import FeaturedProjects from "./components/projects/FeaturedProjects";
 import Skills from "./components/skills/Skills";
 import Stack from "./components/stack/Stack";
 import Header from "./components/header/Header";
@@ -140,6 +141,8 @@ border border-stone-300 dark:border-zinc-800 p-2"
         <Stack />
 
         <Experience />
+
+        <FeaturedProjects />
       </div>
     </section>
   );
